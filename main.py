@@ -17,8 +17,8 @@ def gamePage():
 	translate = YandexTranslate(readKey())
 	translation = translate.translate('dog', 'en-fr')
 	obj = json.dumps(translation)
-	print(obj)
-	return translation
+	print(translation)
+	return obj
 
 
 
