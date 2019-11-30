@@ -1,6 +1,7 @@
 # Import Flask
 import flask
 from yandex_translate import YandexTranslate
+import json
 
 
 # Create the application
@@ -15,7 +16,8 @@ def gamePage():
 
 	translate = YandexTranslate(readKey())
 	translation = translate.translate('dog', 'en-fr')
-	print(translation)
+	obj = json.dumps(translation)
+	print(obj)
 	return translation
 
 
