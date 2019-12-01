@@ -18,6 +18,5 @@ def readKey():
 	contents = f.read()
 	return contents.strip()
 
-
 if __name__ == '__main__':
 	app.run(debug=True)
