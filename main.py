@@ -23,6 +23,7 @@ def page():
 	op4 = words[random.randint(0, len(words))]
 	op5 = words[random.randint(0, len(words))]
 
+	global correct 
 	correct = random.randint(1, 5)
 	if correct == 1: op1 = key
 	if correct == 2: op2 = key
@@ -30,28 +31,37 @@ def page():
 	if correct == 4: op4 = key
 	if correct == 5: op5 = key
 
-	return flask.render_template('index.html', word = YandexTranslate(readKey()).translate(key, lang)['text'][0], 
+	return flask.render_template('question.html', word = YandexTranslate(readKey()).translate(key, lang)['text'][0], 
 		op1 = op1, op2 = op2, op3 = op3, op4 = op4, op5 = op5)
 
 @app.route("/option1/", methods=['POST'])
 def option1():
-	return flask.render_template('index.html', word='Option 1');
+	if correct == 1: return flask.render_template('result.html', word='CORRECT');
+	return flask.render_template('result.html', word='WRONG');
 
 @app.route("/option2/", methods=['POST'])
 def option2():
-	return flask.render_template('index.html', word='Option 2');
+	if correct == 2: return flask.render_template('result.html', word='CORRECT');
+	return flask.render_template('result.html', word='WRONG');
 
 @app.route("/option3/", methods=['POST'])
 def option3():
-	return flask.render_template('index.html', word='Option 3');
+	if correct == 3: return flask.render_template('result.html', word='CORRECT');
+	return flask.render_template('result.html', word='WRONG');
 
 @app.route("/option4/", methods=['POST'])
 def option4():
-	return flask.render_template('index.html', word='Option 4');
+	if correct == 4: return flask.render_template('result.html', word='CORRECT');
+	return flask.render_template('result.html', word='WRONG');
 
 @app.route("/option5/", methods=['POST'])
 def option5():
-	return flask.render_template('index.html', word='Option 5');
+	if correct == 5: return flask.render_template('result.html', word='CORRECT');
+	return flask.render_template('result.html', word='WRONG');
+
+@app.route("/next/", methods=['POST'])
+def next():
+	return page();
 
 def readKey():
 	file = open("secrets.txt", "r")
