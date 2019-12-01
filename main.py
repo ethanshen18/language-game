@@ -10,7 +10,7 @@ app = flask.Flask(__name__)
 @app.route('/')
 def page():
 	translate = YandexTranslate(readKey())
-	translation = translate.translate('dog', 'en-zh')
+	translation = translate.translate('if', 'en-zh')
 	return flask.render_template('language.html', word=translation['text'][0].upper())
 
 def readKey():
