@@ -9,18 +9,9 @@ app = flask.Flask(__name__)
 
 @app.route('/')
 def page():
-	return flask.render_template('language.html')
-
-@app.route('/game')
-def gamePage():
-
 	translate = YandexTranslate(readKey())
 	translation = translate.translate('dog', 'en-fr')
-	obj = json.dumps(translation)
-	print(translation)
-	return obj
-
-
+	return flask.render_template('language.html', word=translation['text'][0].upper())
 
 def readKey():
 	f = open("secrets.txt", "r")
