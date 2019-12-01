@@ -58,7 +58,7 @@
 			font-size: 100px;
 			text-transform: uppercase;
 			text-align: center;
-			padding-top: 150px;
+			padding-top: 100px;
 			padding-bottom: 100px;
 		}
 
@@ -94,6 +94,11 @@
 			background-color: #A0D9AB !important;
 			color: #333333 !important;
 		}
+
+		.result {
+			text-align: center;
+			font-size: 20px;
+		}
 		
 		footer {
 			background-color: #FFDEF0;
@@ -102,8 +107,8 @@
 			left: 0;
 			bottom: 0;
 			width: 100%;
-			font-size: 18px;
-			padding-top: 15px;
+			font-size: 15px;
+			padding-top: 10px;
 		}
 		
 		@media screen and (max-width: 767px) {
@@ -142,13 +147,19 @@
 				<h1 class="word">{{word}}</h1>
 			</div>
 		</div>
+		<div class="row content">
+			<div class="col-sm-12 text-left"> 
+				<p class="result">Correct Answer: {{original}} - {{answer}}</p>
+			</div>
+		</div>
 		<form class="btn-group" action="/next/" method="post">
 			<button type="submit" class="btn btn-primary">NEXT QUESTION</button>
 		</form>
 	</div>
 
 	<footer class="container-fluid text-center">
-		<p>Ethan | Jason | Dora</p>
+		<p>&copy; 2019 Ethan | Jason | Dora</p>
+		<p>Translation Powered By Yandex Translate</p>
 	</footer>
 </body>
 </html>

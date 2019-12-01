@@ -16,6 +16,7 @@ def page():
 	words = file.readlines()
 	file.close()
 
+	global key
 	key = words[random.randint(0, len(words))]
 	op1 = words[random.randint(0, len(words))]
 	op2 = words[random.randint(0, len(words))]
@@ -31,33 +32,35 @@ def page():
 	if correct == 4: op4 = key
 	if correct == 5: op5 = key
 
-	return flask.render_template('question.html', word = YandexTranslate(readKey()).translate(key, lang)['text'][0], 
-		op1 = op1, op2 = op2, op3 = op3, op4 = op4, op5 = op5)
+	global translation
+	translation = YandexTranslate(readKey()).translate(key, lang)['text'][0]
+
+	return flask.render_template('question.html', word = translation, op1 = op1, op2 = op2, op3 = op3, op4 = op4, op5 = op5)
 
 @app.route("/option1/", methods=['POST'])
 def option1():
-	if correct == 1: return flask.render_template('result.html', word='CORRECT');
-	return flask.render_template('result.html', word='WRONG');
+	if correct == 1: return flask.render_template('result.html', word = 'CORRECT', answer = key, original = translation);
+	return flask.render_template('result.html', word = 'WRONG', answer = key, original = translation);
 
 @app.route("/option2/", methods=['POST'])
 def option2():
-	if correct == 2: return flask.render_template('result.html', word='CORRECT');
-	return flask.render_template('result.html', word='WRONG');
+	if correct == 2: return flask.render_template('result.html', word = 'CORRECT', answer = key, original = translation);
+	return flask.render_template('result.html', word = 'WRONG', answer = key, original = translation);
 
 @app.route("/option3/", methods=['POST'])
 def option3():
-	if correct == 3: return flask.render_template('result.html', word='CORRECT');
-	return flask.render_template('result.html', word='WRONG');
+	if correct == 3: return flask.render_template('result.html', word = 'CORRECT', answer = key, original = translation);
+	return flask.render_template('result.html', word = 'WRONG', answer = key, original = translation);
 
 @app.route("/option4/", methods=['POST'])
 def option4():
-	if correct == 4: return flask.render_template('result.html', word='CORRECT');
-	return flask.render_template('result.html', word='WRONG');
+	if correct == 4: return flask.render_template('result.html', word = 'CORRECT', answer = key, original = translation);
+	return flask.render_template('result.html', word = 'WRONG', answer = key, original = translation);
 
 @app.route("/option5/", methods=['POST'])
 def option5():
-	if correct == 5: return flask.render_template('result.html', word='CORRECT');
-	return flask.render_template('result.html', word='WRONG');
+	if correct == 5: return flask.render_template('result.html', word = 'CORRECT', answer = key, original = translation);
+	return flask.render_template('result.html', word = 'WRONG', answer = key, original = translation);
 
 @app.route("/next/", methods=['POST'])
 def next():
