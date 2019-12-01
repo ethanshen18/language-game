@@ -1,4 +1,5 @@
-# Python Flask Language Learning Game - nwPlus Hack Day Project
+# Python Language Learning Game
+# nwPlus Hack Day Project
 
 This is a Python based dynamic web application that allows english speakers to learn a new language by doing multiple choice quiz on a selected language. 
 
