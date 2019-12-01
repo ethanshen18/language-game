@@ -1,0 +1,109 @@
+body {
+	font-family: 'Sulphur Point', sans-serif;
+	color: black;
+}
+
+.navbar {
+	background-color: #FFDEF0;
+	margin-bottom: 0;
+	border-radius: 0;
+	border-width: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+.navbar-brand {
+	color: #555555 !important;
+	font-size: 22px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.dropdown-toggle {
+	color: #555555 !important;
+	font-size: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 20px;
+}
+
+.dropdown-toggle:focus{
+	background-color: #FFC2F0 !important;
+}
+.dropdown-toggle:hover{
+	background-color: #FFC2F0 !important;
+}
+.dropdown-toggle:visited{
+	background-color: #FFC2F0 !important;
+}
+
+.word {
+	font-size: 100px;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.btn-group {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+}
+
+.btn-primary {
+	background-color: #C5EDD4;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #333333;
+	border-width: 0;
+	font-size: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.btn-primary:focus {
+	background-color: #A0D9AB !important;
+	color: #333333 !important;
+	outline: 0 !important;
+}
+.btn-primary:hover {
+	background-color: #A0D9AB !important;
+	color: #333333 !important;
+}
+.btn-primary:visited {
+	background-color: #A0D9AB !important;
+	color: #333333 !important;
+}
+
+.result {
+	text-align: center;
+	font-size: 20px;
+}
+
+footer {
+	background-color: #FFDEF0;
+	color: #333333;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	font-size: 15px;
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+	.row.content {height:auto;} 
+}
