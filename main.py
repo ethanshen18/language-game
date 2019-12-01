@@ -33,10 +33,25 @@ def page():
 	return flask.render_template('index.html', word = YandexTranslate(readKey()).translate(key, lang)['text'][0], 
 		op1 = op1, op2 = op2, op3 = op3, op4 = op4, op5 = op5)
 
-@app.route("/option/", methods=['POST'])
-def option():
-	data = flask.request.form['value']
-	return flask.render_template('index.html', word=data);
+@app.route("/option1/", methods=['POST'])
+def option1():
+	return flask.render_template('index.html', word='Option 1');
+
+@app.route("/option2/", methods=['POST'])
+def option2():
+	return flask.render_template('index.html', word='Option 2');
+
+@app.route("/option3/", methods=['POST'])
+def option3():
+	return flask.render_template('index.html', word='Option 3');
+
+@app.route("/option4/", methods=['POST'])
+def option4():
+	return flask.render_template('index.html', word='Option 4');
+
+@app.route("/option5/", methods=['POST'])
+def option5():
+	return flask.render_template('index.html', word='Option 5');
 
 def readKey():
 	file = open("secrets.txt", "r")

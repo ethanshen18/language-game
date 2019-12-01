@@ -116,45 +116,51 @@
 	</style>
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand">Language Game</a>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">Language Game</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Language<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">French</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Level<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">5 Options</a></li>
+					</ul>\
+				</li>
+			</ul>
 		</div>
-		<ul class="nav navbar-nav">
-			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Language<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">French</a></li>
-				</ul>
-			</li>
-			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Level<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">5 Options</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</nav>
-	
-<div class="container-fluid text-center">    
-	<div class="row content">
-		<div class="col-sm-12 text-left"> 
-			<h1 class="word">{{word}}</h1>
+	</nav>
+
+	<div class="container-fluid text-center">    
+		<div class="row content">
+			<div class="col-sm-12 text-left"> 
+				<h1 class="word">{{word}}</h1>
+			</div>
 		</div>
+		<form class="btn-group" action="/option1/" method="post">
+			<button type="submit" class="btn btn-primary">{{op1}}</button>
+		</form>
+		<form class="btn-group" action="/option2/" method="post">
+			<button type="submit" class="btn btn-primary">{{op2}}</button>
+		</form>
+		<form class="btn-group" action="/option3/" method="post">
+			<button type="submit" class="btn btn-primary">{{op3}}</button>
+		</form>
+		<form class="btn-group" action="/option4/" method="post">
+			<button type="submit" class="btn btn-primary">{{op4}}</button>
+		</form>
+		<form class="btn-group" action="/option5/" method="post">
+			<button type="submit" class="btn btn-primary">{{op5}}</button>
+		</form>
 	</div>
-	<form class="btn-group" action="/option/" method="post">
-		<button type="submit" class="btn btn-primary" value="1">{{op1}}</button>
-		<button type="submit" class="btn btn-primary" value="2">{{op2}}</button>
-		<button type="submit" class="btn btn-primary" value="3">{{op3}}</button>
-		<button type="submit" class="btn btn-primary" value="4">{{op4}}</button>
-		<button type="submit" class="btn btn-primary" value="5">{{op5}}</button>
-	</form>
-</div>
 
-<footer class="container-fluid text-center">
-	<p>Ethan | Jason | Dora</p>
-</footer>
-
+	<footer class="container-fluid text-center">
+		<p>Ethan | Jason | Dora</p>
+	</footer>
 </body>
 </html>
