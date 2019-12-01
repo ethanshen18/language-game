@@ -13,9 +13,7 @@
 <body>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/">Language Game</a>
-			</div>
+			<div class="navbar-header"><a class="navbar-brand" href="/">Language Game</a></div>
 			<ul class="nav navbar-nav">
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">{{language}}<span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -31,29 +29,16 @@
 		</div>
 	</nav>
 
-	{% if answer %}
-        <div class="container-fluid text-center">    
+	<div class="container-fluid text-center">    
+		<div class="row content"><div class="col-sm-12 text-left"><h1 class="word">{{word}}</h1></div></div>
+		{% if answer %}
 			<div class="row content">
-				<div class="col-sm-12 text-left"> 
-					<h1 class="word">{{word}}</h1>
-				</div>
-			</div>
-			<div class="row content">
-				<div class="col-sm-12 text-left"> 
-					<p class="result">Correct Answer: {{original}} - {{answer}}</p>
-				</div>
+				<div class="col-sm-12 text-left"><p class="result">Correct Answer: {{original}} - {{answer}}</p></div>
 			</div>
 			<form class="btn-group" action="/next/" method="post">
 				<button type="submit" class="btn btn-primary">NEXT QUESTION</button>
 			</form>
-		</div>
-    {% else %}
-        <div class="container-fluid text-center">    
-			<div class="row content">
-				<div class="col-sm-12 text-left"> 
-					<h1 class="word">{{word}}</h1>
-				</div>
-			</div>
+		{% else %}
 			<form class="btn-group" action="/option1/" method="post">
 				<button type="submit" class="btn btn-primary">{{op1}}</button>
 			</form>
@@ -69,8 +54,8 @@
 			<form class="btn-group" action="/option5/" method="post">
 				<button type="submit" class="btn btn-primary">{{op5}}</button>
 			</form>
-		</div>
-    {% endif %}
+		{% endif %}
+	</div>
 
 	<footer class="container-fluid text-center">
 		<p>&copy; 2019 Ethan | Jason | Dora</p>
