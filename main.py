@@ -1,7 +1,6 @@
 import json
 import flask
 import random
-import requests
 from yandex_translate import YandexTranslate
 
 app = flask.Flask(__name__)
