@@ -1,15 +1,17 @@
 # Python Language Learning Game
-# nwPlus Hack Day Project
+## 2019 nwPlus Hack Day Project
 
 This is a Python based dynamic web application that allows english speakers to learn a new language by doing multiple choice quiz on a selected language. 
 
-Highlight Functionalities: 
+## Highlight Functionalities
 
-  Responsive Design (Touch Screen Friendly)
+Responsive Design (Touch Screen Friendly)
 
-  Dynamic Python Scripts Powered By Flask
+Dynamic Python Scripts Powered By Flask
 
-  Language Selection
+Language Selection
+
+## Demo
 
 Please visit the link below for an interactive project showcase that demonstrates the functionality of this website. 
 
