@@ -1,10 +1,12 @@
 body {
 	font-family: 'Sulphur Point', sans-serif;
-	color: black;
+	background-color: #2F3842;
+	color: white;
 }
 
 .navbar {
-	background-color: #FFDEF0;
+	background-color: black;
+	color: white;
 	margin-bottom: 0;
 	border-radius: 0;
 	border-width: 0;
@@ -12,21 +14,15 @@ body {
 	padding-bottom: 20px;
 }
 
-.sidenav {
-	padding-top: 20px;
-	background-color: #f1f1f1;
-	height: 100%;
-}
-
 .navbar-brand {
-	color: #555555 !important;
+	color: white !important;
 	font-size: 22px;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
 .dropdown-toggle {
-	color: #555555 !important;
+	color: white !important;
 	font-size: 20px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -34,13 +30,16 @@ body {
 }
 
 .dropdown-toggle:focus{
-	background-color: #FFC2F0 !important;
+	background-color: white !important;
+	color: black !important;
 }
 .dropdown-toggle:hover{
-	background-color: #FFC2F0 !important;
+	background-color: white !important;
+	color: black !important;
 }
 .dropdown-toggle:visited{
-	background-color: #FFC2F0 !important;
+	background-color: white !important;
+	color: black !important;
 }
 
 .word {
@@ -48,21 +47,22 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 80px;
 }
 
 .btn-group {
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 100px;
+	margin-bottom: 10px;
 }
 
 .btn-primary {
-	background-color: #C5EDD4;
+	background-color: black;
 	font-size: 20px;
 	text-transform: uppercase;
-	color: #333333;
+	color: white;
 	border-width: 0;
+	border-radius: 20px;
 	font-size: 30px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -71,17 +71,17 @@ body {
 }
 
 .btn-primary:focus {
-	background-color: #A0D9AB !important;
-	color: #333333 !important;
+	background-color: white !important;
+	color: black !important;
 	outline: 0 !important;
 }
 .btn-primary:hover {
-	background-color: #A0D9AB !important;
-	color: #333333 !important;
+	background-color: white !important;
+	color: black !important;
 }
 .btn-primary:visited {
-	background-color: #A0D9AB !important;
-	color: #333333 !important;
+	background-color: white !important;
+	color: black !important;
 }
 
 .result {
@@ -90,20 +90,11 @@ body {
 }
 
 footer {
-	background-color: #FFDEF0;
-	color: #333333;
+	background-color: black;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	font-size: 15px;
 	padding-top: 10px;
-}
-
-@media screen and (max-width: 767px) {
-	.sidenav {
-		height: auto;
-		padding: 15px;
-	}
-	.row.content {height:auto;} 
 }
