@@ -8,7 +8,7 @@ This is a Python-based dynamic web application built with Flask that allows Engl
 
 The Yandex translation API was used for the basic fetching of foreign language words. Words are selecting randomly using Python and presented using HTML and CSS on a dynamic webpage and receive user input using Python. It outputs if the user made the correct selection and move on to the next level of words.
 
-## Highlight Functionalities
+## Highlight Features
 
 Yandex Translation API Intergration
 
