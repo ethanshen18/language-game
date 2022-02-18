@@ -1,7 +1,8 @@
 # Python Language Learning Game
+
 ## 2019 nwPlus Hack Day Project
 
-We live in a multicultural country and the tech community is extremely diverse. We see the importance of being able to communicate with people from all parts of the world.
+We live in a multicultural society and the tech community is extremely diverse. We see the importance of being able to communicate with people from all parts of the world.
 
 This is a Python-based dynamic web application built with Flask that allows English speakers to learn a new language by doing multiple choice quiz on a selected language. The objective is to correctly identify the English translation for the word being displayed.
 
